@@ -24,8 +24,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    getScreenSize();
-    print(screenSizeConstraints.getRatioHeight());
+    double heightVal = screenSizeConstraints.getRatioHeight();
+    double widthVal = screenSizeConstraints.getRatioWidth();
     return Scaffold(
         body: Center(
       child: Column(
@@ -37,8 +37,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
               children: [
                 Image(
                   image: AssetImage('images/movie.png'),
-                  width: (screenSizeConstraints.getRatioWidth()) * 200.0,
-                  height: (screenSizeConstraints.getRatioHeight()) * 200.0,
+                  width: widthVal * 200.0,
+                  height: heightVal * 200.0,
                 ),
                 Text(
                   "Movie Suggester",

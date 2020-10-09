@@ -12,7 +12,6 @@ class ScreenSizeConstraints {
 
   setWidthScreen(var value) {
     _widthScreen = value;
-    print(_widthScreen);
   }
 
   double getRatioHeight() {
